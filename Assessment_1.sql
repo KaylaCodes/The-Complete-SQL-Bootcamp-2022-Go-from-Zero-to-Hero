@@ -10,8 +10,8 @@ having sum(amount)>=110;
 -- 2. How many films begin with the letter J?
 -- The answer should be 20.
 
-select count(title) from film
-where title like 'J%'
+select count(*) from film
+where title like 'J%';
 
 
 -- 3. What customer has the highest customer ID number whose name starts with an 'E' and has an address ID lower than 500?
@@ -20,4 +20,4 @@ select customer_id, first_name, last_name from customer
 where first_name like 'E%'
 and address_id <500 
 order by customer_id desc
-limit 1
+limit 1;
