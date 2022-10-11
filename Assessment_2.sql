@@ -67,4 +67,3 @@ SELECT starttime, firstname || ' ' || surname AS fullname
 FROM cd.members
 INNER JOIN cd.bookings ON bookings.memid = members.memid
 WHERE firstname || ' ' || surname = 'David Farrell'
-
