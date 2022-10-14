@@ -15,12 +15,31 @@
 -- His contact info is: jsalk@school.org and a phone number of 777-555-4321.
 
 
-create table students( 
-	student_id  serial primary key,
-	first_name varchar(50) not null,
-	last_name varchar(50) not null,
-	homeroom_number varchar(5),
-	phone varchar(15) not null unique,
-	email varchar(50) unique,
-	graduation_year smallint
+CREATE TABLE students( 
+	student_id SERIAL PRIMARY KEY,
+	first_name varchar(50) NOT NULL,
+	last_name varchar(50) NOT NULL,
+	homeroom_number SMALLINT,
+	phone varchar(15) NOT NULL UNIQUE,
+	email varchar(50) UNIQUE,
+	graduation_year SMALLINT
 )
+
+CREATE TABLE teachers (
+	teacher_id SERIAL PRIMARY KEY,
+	first_name varchar(50) NOT NULL,
+	last_name varchar(50) NOT NULL,
+	homeroom_number SMALLINT,
+	department varchar(50),
+	email varchar(50) UNIQUE
+)
+
+INSERT INTO students(first_name,last_name, homeroom_number,phone,graduation_year)
+VALUES 
+('Mark','Watney',5,'775-555-1234',2035)
+
+INSERT INTO teachers(first_name,last_name, homeroom_number,department,phone, email)
+VALUES
+('Jonas', 'Salk', 5, 'Biology', '777-555-4321', 'jsalk@school.org')
+
+
